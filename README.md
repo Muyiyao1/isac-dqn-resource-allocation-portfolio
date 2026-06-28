@@ -1,5 +1,7 @@
 # ISAC DQN Resource Allocation Portfolio
 
+[中文简要说明](README.zh-CN.md)
+
 Public portfolio export for a deep reinforcement learning project on resource allocation in Integrated Sensing and Communication (ISAC) systems.
 
 The project studies whether a communication-oriented Deep Q-Network (DQN) power-allocation framework can be extended with sensing-aware state features, a sensing power split, and a reward function that balances communication throughput, sensing utility, and transmit-power cost.
