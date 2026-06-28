@@ -1,0 +1,37 @@
+# OS and editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Python caches, if code is added later
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local experiment outputs, if regenerated later
+checkpoints/
+models/
+*.pt
+*.pth
+*.pkl
+
+# Dissertation and LaTeX artifacts should not be added to this public export
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.pdf
+*.zip
