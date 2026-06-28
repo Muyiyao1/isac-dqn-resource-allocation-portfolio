@@ -1,0 +1,108 @@
+{
+  "python_version": "3.12.10",
+  "torch": "2.12.1+cpu",
+  "checked_results_dir": "results/final",
+  "checked_models_dir": null,
+  "environment": {
+    "state_dim": 200,
+    "num_cell_actions": 288,
+    "global_action_outputs": 1440,
+    "sample_reward": 0.36848366260528564
+  },
+  "csv_outputs": {
+    "training_history.csv": {
+      "rows": 8800,
+      "columns": [
+        "alpha",
+        "episode",
+        "episode_reward",
+        "epsilon",
+        "loss",
+        "throughput_mbps",
+        "sensing_score",
+        "total_power_w",
+        "avg_sinr_db",
+        "avg_cqi",
+        "avg_sensing_split",
+        "reward"
+      ]
+    },
+    "evaluation_results.csv": {
+      "rows": 2640,
+      "columns": [
+        "throughput_mbps",
+        "sensing_score",
+        "total_power_w",
+        "avg_sinr_db",
+        "avg_cqi",
+        "comm_norm",
+        "sense_norm",
+        "power_norm",
+        "avg_sensing_split",
+        "reward",
+        "alpha",
+        "episode",
+        "policy"
+      ]
+    },
+    "robustness_results.csv": {
+      "rows": 2640,
+      "columns": [
+        "throughput_mbps",
+        "sensing_score",
+        "total_power_w",
+        "avg_sinr_db",
+        "avg_cqi",
+        "comm_norm",
+        "sense_norm",
+        "power_norm",
+        "avg_sensing_split",
+        "reward",
+        "alpha",
+        "episode",
+        "policy",
+        "perturbation_db"
+      ]
+    },
+    "summary_by_policy.csv": {
+      "rows": 44,
+      "columns": [
+        "alpha",
+        "policy",
+        "throughput_mbps",
+        "sensing_score",
+        "total_power_w",
+        "avg_sinr_db",
+        "avg_cqi",
+        "avg_sensing_split",
+        "reward"
+      ]
+    }
+  },
+  "artifacts": {
+    "figures": [
+      "training_reward.png",
+      "training_loss.png",
+      "tradeoff_throughput_mbps.png",
+      "tradeoff_sensing_score.png",
+      "tradeoff_total_power_w.png",
+      "tradeoff_avg_sinr_db.png",
+      "tradeoff_avg_cqi.png",
+      "tradeoff_avg_sensing_split.png",
+      "tradeoff_reward.png",
+      "dqn_comm_sense_tradeoff.png",
+      "dqn_sensing_split_vs_alpha.png",
+      "robustness_throughput_mbps.png",
+      "robustness_sensing_score.png",
+      "robustness_reward.png"
+    ],
+    "models": "skipped"
+  },
+  "tradeoff": {
+    "dqn_low_alpha_sensing_split": 0.6099999932199717,
+    "dqn_high_alpha_sensing_split": 0.1820000040531158,
+    "dqn_low_alpha_reward": 0.4705876325567563,
+    "dqn_high_alpha_reward": 0.3638124153017997
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,102 @@
+{
+  "seed": 42,
+  "output_dir": "results/final",
+  "model_dir": "models/full",
+  "environment": {
+    "num_cells": 5,
+    "users_per_cell": 5,
+    "num_subbands": 3,
+    "cell_radius_m": 500.0,
+    "min_user_radius_ratio": 0.2,
+    "subband_bandwidth_hz": 2880000.0,
+    "noise_density_dbm_hz": -174.0,
+    "receiver_noise_figure_db": 7.0,
+    "target_ber": 1e-06,
+    "antenna_3db_deg": 70.0,
+    "antenna_max_attenuation_db": 35.0,
+    "bs_x_m": [
+      272.0,
+      -270.0,
+      -72.0,
+      490.0,
+      -804.0
+    ],
+    "bs_y_m": [
+      668.0,
+      136.0,
+      -839.0,
+      -100.0,
+      -405.0
+    ],
+    "power_levels_w": [
+      0.4,
+      0.6,
+      0.8,
+      1.0,
+      1.2
+    ],
+    "rb_per_subband": [
+      16,
+      16,
+      16
+    ],
+    "max_cell_power_w": 40.0,
+    "max_steps_per_episode": 12,
+    "include_shadowing": true,
+    "shadowing_std_db": 4.0,
+    "include_rayleigh": true,
+    "sensing_noise_factor": 1.0,
+    "throughput_scale_mbps": 300.0,
+    "sensing_scale": 8.0,
+    "power_penalty_lambda": 0.08,
+    "sensing_split_levels": [
+      0.1,
+      0.3,
+      0.5,
+      0.7
+    ]
+  },
+  "dqn": {
+    "hidden_sizes": [
+      512,
+      384,
+      256
+    ],
+    "gamma": 0.25,
+    "learning_rate": 0.00025,
+    "batch_size": 64,
+    "replay_capacity": 50000,
+    "min_replay_size": 400,
+    "target_update_interval": 200,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 3500,
+    "gradient_clip_norm": 5.0
+  },
+  "experiment": {
+    "alphas": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "train_episodes": 800,
+    "eval_episodes": 60,
+    "baseline_episodes": 60,
+    "ga_population": 48,
+    "ga_generations": 35,
+    "robustness_perturbation_db": [
+      0.0,
+      2.0,
+      4.0,
+      6.0
+    ]
+  }
+}

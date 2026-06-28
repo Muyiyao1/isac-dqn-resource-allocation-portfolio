@@ -8,7 +8,7 @@ This project frames that trade-off as a reinforcement learning resource-allocati
 
 ## Method
 
-The implementation described by the local project artifacts adapts a DQN-based downlink power-allocation framework into a simplified ISAC simulation.
+The implementation adapts a DQN-based downlink power-allocation framework into a simplified ISAC simulation.
 
 Core modeling choices:
 
@@ -50,7 +50,7 @@ The result pattern is consistent with the intended trade-off:
 - Throughput increases as the policy moves toward communication-oriented allocation.
 - Sensing score follows an overall decreasing trend with stochastic variation.
 
-Representative values from the local result summary:
+Representative values from the included result set:
 
 | Metric | alpha = 0.0 | alpha = 1.0 |
 | --- | ---: | ---: |
@@ -59,16 +59,16 @@ Representative values from the local result summary:
 
 ## Engineering Value
 
-The main value of the project is not claiming a production-ready 6G optimizer. The useful engineering work is:
+The main value of the project is:
 
 - defining a tractable simulation boundary,
 - turning a domain trade-off into a reward function,
 - validating whether the learned policy moves in the expected direction,
 - using baselines and robustness checks to make results easier to interpret,
-- communicating limitations clearly.
+- keeping limitations explicit.
 
 ## Limitations
 
 - The sensing score is a proxy metric, not a full radar signal processing model.
 - The implementation focuses on one DQN-style framework rather than a broad algorithm comparison.
-- The available public export contains figures and documentation only; runnable source code was not present in the folder used for this GitHub portfolio export.
+- Trained `.pt` model weights are not included, but the source code, configuration, final CSV outputs, and result figures are included.
